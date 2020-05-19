@@ -18,7 +18,7 @@ class Transfer
     if @sender.status != "closed" &&
        @receiver.status != "closed" &&
        @sender.balance > @amount &&
-       @status == "pending" 
+       @status == "pending"
           @status = "complete"
           @sender.balance -= @amount
           @receiver.balance += @amount
