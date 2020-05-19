@@ -19,8 +19,6 @@ class BankAccount
     puts self.balance
     if @balance > 0 && @status == "open"
       true
-    else
-      false
     end
   end
 
