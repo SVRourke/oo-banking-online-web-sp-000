@@ -13,11 +13,12 @@ class Transfer
     @sender.valid? && @receiver.valid?
   end
 
-  def self.execute_transaction
+  def execute_transaction
     if @sender.balance < @amount
       false
     else
       @sender.balance -= @amount
       @receiver.balance += @amount
     end
+  end
 end
