@@ -15,6 +15,7 @@ class BankAccount
   end
 
   def valid?
+    puts self.balance
     if @balance > 0 && @status == open
       true
     end
