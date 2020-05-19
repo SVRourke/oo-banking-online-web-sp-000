@@ -1,13 +1,14 @@
 class Transfer
   attr_accessor :sender, :receiver, :amount, :status
   # your code here
-  @processed = Array.new
+  @@transfers = Array.new
 
   def initialize(sender, receiver, amount)
     @sender = sender
     @receiver = receiver
     @status = "pending"
     @amount = amount
+    @@transfers << self
   end
 
   def valid?
